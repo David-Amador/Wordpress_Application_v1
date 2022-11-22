@@ -1,7 +1,5 @@
 locals {
-  account        = "oracle"
-  account_abbrev = "ora"
-  account_id     = "337192113483"
-  region         = "eu-west-1"
-  region_abbrev  = "euw1"
+  account_id     = "055667863131"
+  region         = "eu-south-2"
+  region_abbrev  = "eus2"
 }

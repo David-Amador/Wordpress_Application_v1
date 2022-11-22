@@ -9,7 +9,6 @@ locals {
   environment_abbrev = local.infrastructure_vars.locals.environment_abbrev
   region             = local.region_vars.locals.region
   region_abbrev      = local.region_vars.locals.region_abbrev
-  account_abbrev     = local.region_vars.locals.account_abbrev
   account_id         = local.region_vars.locals.account_id
   
 # Resouce naming pattern
@@ -24,18 +23,12 @@ generate "provider" {
 provider "aws" {
   region = "${local.region}"
   allowed_account_ids = ["${local.account_id}"]
-  
-  assume_role {
-
-    role_arn = "arn:aws:iam::${local.account_id}:role/CAARole-AdministratorAccess"
-
-  }
 } 
 EOF
 }
 
 # Configure Terragrunt to automatically store tfstate files in an S3 bucket
-remote_state {
+/*remote_state {
   backend = "s3"
   config = {
     encrypt        = true
@@ -49,10 +42,10 @@ remote_state {
     path      = "backend.tf"
     if_exists = "overwrite_terragrunt"
   }
-}
+}*/
 
 # Configure root level configuration that all resources can inherit.
-terraform {
+/*terraform {
   extra_arguments "parallelism" {
     commands  = get_terraform_commands_that_need_parallelism()
     arguments = ["-parallelism=2"]
@@ -62,7 +55,7 @@ terraform {
     arguments = ["-lock-timeout=15m"]
   }
 }
-
+*/
 # Configure root level variables that all resources can inherit.
 inputs = merge(
   local.infrastructure_vars.locals,
