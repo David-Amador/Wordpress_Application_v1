@@ -4,7 +4,7 @@ include root {
 
 terraform {
   
-  source = "C:/Users/damadormartinez/OneDrive - Deloitte (O365D)/Proyectos/Personal/Proyectos AWS/Terraform Code\Wordpress_Application/modules/ccrepo-shr-iac_ec2_mod-glo-001"
+  source = "C:/Users/damadormartinez/OneDrive - Deloitte (O365D)/Proyectos/Personal/Proyectos AWS/Terraform Code/Wordpress_Application/modules/ccrepo-shr-iac_ec2_mod-glo-001"
   
 }
 
