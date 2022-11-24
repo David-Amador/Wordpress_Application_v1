@@ -9,6 +9,7 @@ locals {
   environment_abbrev = local.infrastructure_vars.locals.environment_abbrev
   region             = local.region_vars.locals.region
   region_abbrev      = local.region_vars.locals.region_abbrev
+  account_abbrev     = local.region_vars.locals.account_abbrev
   account_id         = local.region_vars.locals.account_id
   
 # Resouce naming pattern
@@ -23,7 +24,7 @@ generate "provider" {
 provider "aws" {
   region = "${local.region}"
   allowed_account_ids = ["${local.account_id}"]
-  profile= personal
+  
 } 
 EOF
 }

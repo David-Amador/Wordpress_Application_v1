@@ -10,7 +10,7 @@ variable "create_ec2" {
 
 variable "instance_type" {
   description = "Variable that defines the type of the Ec2 intance that has to be created."
-  type        = String
+  type        = string
   default     = ""
 
 }

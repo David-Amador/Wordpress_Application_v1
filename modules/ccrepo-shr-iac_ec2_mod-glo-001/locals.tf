@@ -1,3 +1,3 @@
 locals {
-  user = var.create_ec2
+  create = var.create_ec2
 }
