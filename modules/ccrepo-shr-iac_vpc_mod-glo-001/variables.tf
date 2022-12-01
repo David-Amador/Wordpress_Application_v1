@@ -1,7 +1,7 @@
 
 
 variable "create_vpc" {
-  description = "Boolean that define ehwther the user resource has to be created."
+  description = "Boolean that define either the vpc resource has to be created."
   type        = bool
   default     = false
 
@@ -9,7 +9,7 @@ variable "create_vpc" {
 
 
 variable "cidr" {
-  description = "Variable that defines the type of the Ec2 intance that has to be created."
+  description = "Variable that defines the ip range of the vpc where the resources are going to be deployed."
   type        = string
   default     = ""
 

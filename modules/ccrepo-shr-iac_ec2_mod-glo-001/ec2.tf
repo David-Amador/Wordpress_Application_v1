@@ -4,6 +4,7 @@ resource "aws_instance" "web" {
 
   ami               = data.aws_ami.ec2_wordpress[0].id
   instance_type     = var.instance_type
+  subnet_id         = var.snet_id
 
   
 }

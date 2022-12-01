@@ -14,3 +14,11 @@ variable "instance_type" {
   default     = ""
 
 }
+
+
+variable "snet_id" {
+  description = "Variable that defines the id of the VPC where the subnet is going to be deployed"
+  type        = string
+  default     = ""
+
+}
