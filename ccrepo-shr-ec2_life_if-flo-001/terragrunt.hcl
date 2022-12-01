@@ -24,6 +24,13 @@ generate "provider" {
 provider "aws" {
   region = "${local.region}"
   allowed_account_ids = ["${local.account_id}"]
+
+  assume_role {
+
+    role_arn = "arn:aws:iam::${local.account_id}:role/CAARole-AdministratorAccess"
+
+  }
+  profile = "personal"
   
 } 
 EOF
