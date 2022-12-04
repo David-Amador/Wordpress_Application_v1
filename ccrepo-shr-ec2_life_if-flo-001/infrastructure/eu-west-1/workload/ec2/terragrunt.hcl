@@ -8,11 +8,11 @@ terraform {
 }
  
 dependency  "snet" { config_path = "../../network/SNET" }
-
+dependency   "vpc" {config_path = "../../network/VPC"}
 
 inputs = {
-  create_ec2    = true
-  instance_type = "t3.micro"
-  snet_id     = dependency.snet.outputs.snet_id
-  
+  create_ec2              = true
+  instance_type           = "t3.micro"
+  snet_id                 = dependency.snet.outputs.snet_id
+  vpc_security_group_ids  = dependency.vpc.outputs.security_group
 }

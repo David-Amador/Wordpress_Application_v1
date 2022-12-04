@@ -22,3 +22,11 @@ variable "snet_id" {
   default     = ""
 
 }
+
+
+variable "vpc_security_group_ids" {
+  description = "Variable that defines the id of the VPC where the subnet is going to be deployed"
+  type        = string
+  default     = ""
+
+}
