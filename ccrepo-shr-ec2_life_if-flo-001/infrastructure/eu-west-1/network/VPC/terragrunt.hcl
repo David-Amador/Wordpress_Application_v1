@@ -12,6 +12,7 @@ terraform {
 
 inputs = {
   create_vpc    = true
-  cidr = "10.0.0.0/16"
+  cidr          = "10.0.0.0/16"
+  create_sg     = true
   
 }
