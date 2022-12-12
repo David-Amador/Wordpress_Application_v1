@@ -22,6 +22,13 @@ resource "aws_security_group" "from_internet_to_ec2" {
     protocol         = "-1"
     cidr_blocks      = [aws_vpc.main.*.cidr_block [0]]
   }
+   ingress {
+    description      = "TLS from VPC"
+    from_port        = 0
+    to_port          = 0
+    protocol         = "-1"
+    cidr_blocks      = ["0.0.0.0/0"]
+  }
 
   egress {
     from_port        = 0

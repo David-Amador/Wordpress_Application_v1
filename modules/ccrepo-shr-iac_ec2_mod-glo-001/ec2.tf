@@ -8,3 +8,13 @@ resource "aws_instance" "web" {
   vpc_security_group_ids  = [var.vpc_security_group_ids]
   
 }
+/*
+resource "aws_eip" "eip"{
+  vpc = true
+}
+
+
+resource "aws_eip_association" "eip_assoc" {
+  instance_id   = aws_instance.web.*.id [0]
+  allocation_id = aws_eip.eip.id
+}*/

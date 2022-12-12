@@ -23,6 +23,14 @@ variable "vpc_id" {
 }
 
 
+variable "map_public_ip_on_launch" {
+  description = "Variable that defines the id of the VPC where the subnet is going to be deployed"
+  type        = bool
+  default     = false
+
+}
+
+
 
 
 
